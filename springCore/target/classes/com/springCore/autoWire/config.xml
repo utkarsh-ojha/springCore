@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <!--*************************************************************************************************************************--> 
+ 
+							<!--3rd way of doing setter injection using p schema-->
+ <bean class="com.springCore.autoWire.Address" name="address" p:street = "1836/1" p:city = "Patna" />
+ 
+ 
+ <!-- Autowire by using byName -->
+ <bean class="com.springCore.autoWire.Employee" name="emp" autowire = "byName"/>
+ 
+ <!-- Autowire by using byType(it check for the address of the object type i.e class attribute in this case it will check for com.springCore.autoWire.Address) -->
+ <bean class="com.springCore.autoWire.Employee" name="empType" autowire = "byType"/>
+ 
+ 
+ <!-- Autowire by using constructor (it will call constructor in class) -->
+ <bean class="com.springCore.autoWire.Employee" name="empCons" autowire = "constructor"/>
+  
+ <!--*************************************************************************************************************************-->
+ 
+</beans>

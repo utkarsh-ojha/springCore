@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <!-- tO UNABLE ALL THE ANNOTAIONS -->
+ <context:annotation-config/>
+ 
+ 
+ <!--*************************************************************************************************************************-->
+
+ 
+<!-- Using XML config -->
+<!--<bean class="com.springCore.lifeCycle.Samosa" name="samo" p:price = "10" init-method="init" destroy-method="destroy"/>-->
+
+ <!-- Using interface -->
+ <!--<bean class="com.springCore.lifeCycle.Pepsi" name="pep" p:price = "18"/>-->
+ 
+  <!-- Using anotation -->
+                            
+ <bean class="com.springCore.lifeCycle.Example" name="exp" p:example = "Math"/>
+  
+ <!--*************************************************************************************************************************-->
+ 
+</beans>

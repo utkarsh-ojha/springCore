@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <!--*************************************************************************************************************************-->
+ <!--Constructor injection-->
+ 
+ <bean class="com.springCore.CI.Certi" name = "certi">
+ <constructor-arg value = "My Certificate"></constructor-arg>
+ 
+ </bean>
+ <bean class="com.springCore.CI.Person" name="person">
+ 	<constructor-arg value ="Utkarsh"/>
+ 	<constructor-arg value ="8877" type = "int"/>
+ 	<constructor-arg ref = "certi"/>
+ </bean>
+ 
+  <!--Constructor injection using c schema-->
+
+ <bean class="com.springCore.CI.Person" name="personn" c:name = "Utkarsh Ojha" c:id = "7788" c:cert-ref = "certi"/>
+
+
+
+
+ <!-- To remove ambiguity in Constructor injection use type attribute-->
+<bean class="com.springCore.CI.Addition" name="add">
+	<constructor-arg value="1" type = "int"/>
+	<constructor-arg value="2" type = "int"/>
+	</bean>
+	
+<bean class="com.springCore.CI.Addition" name="addd">
+	<constructor-arg value="55" type = "double"/>
+	<constructor-arg value="99" type = "double"/>
+	</bean>
+
+ <bean class="com.springCore.CI.Addition" name="additionn" c:a = "534" c:b = "7788"/>
+ 
+ 
+ <!--*************************************************************************************************************************-->
+ 
+</beans>

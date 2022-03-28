@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <!--*************************************************************************************************************************-->
+ <!--Setter injection-->
+ 
+ 								 <!--1st way of doing setter injection of reference type-->
+ 								 
+ <bean name = "bref" class = "com.springCore.ref.B">
+ 	<property name="y" value ="5" />
+ </bean>
+ 
+ <bean name = "aref" class = "com.springCore.ref.A">
+ 	<property name="x" value ="10" />
+ 	<property name="ob" ref= "bref"/>
+ </bean>
+ <!--2nd way of doing setter injection of reference type using pschema-->
+ 
+ <bean name = "aaref" class = "com.springCore.ref.A" p:x = "24" p:ob-ref = "bref"/>
+  
+ <!--*************************************************************************************************************************-->
+ 
+</beans>

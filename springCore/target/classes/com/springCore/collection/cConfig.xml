@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+<!--*************************************************************************************************************************-->
+<!--Setter injection of collection objects-->
+ 
+<!--1st way of doing Setter injection of collection objects-->
+ 
+ <bean name = "collection" class = "com.springCore.collection.Emp">
+  	<property name = "name" value = "Utkarsh"/>
+  
+  	<property name = "phones">
+  		<list>
+ 			<value>1723</value> 
+ 			<value>1253</value> 
+ 			<value>1235</value> 
+ 			<value>1243</value> 
+ 			<value>1273</value> 
+  		</list>
+  	</property>
+  	
+  	<property name = "address">
+  		<set>
+ 			<value>Delhi</value> 
+ 			<value>Ranchi</value> 
+ 			<value>Lucknow</value> 
+  		</set>
+  	</property>
+  	
+  	<property name = "courses">
+  		<map>
+  		<entry key="Java" value="1.4 month"/>
+  		<entry key="Python" value="1.2Month"/>
+  		</map>
+  	</property>
+  
+  <property name = "props">
+  		<props>
+  		<prop key="Utkarsh">23Years</prop>
+  		<prop key="Kritika">23Years</prop>
+  		</props>
+  	</property>
+ </bean>								 
+ 
+<!--2nd way of doing Setter injection of collection objects-->
+							
+ 
+ 
+<!--3rd way of doing Setter injection of collection objects -->
+  
+ <!--*************************************************************************************************************************-->
+ 
+</beans>
